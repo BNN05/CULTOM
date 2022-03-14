@@ -1,0 +1,27 @@
+﻿@page
+@model CULTOM.Pages.Index1Model
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cultom</h1>
+    <div class="grid">
+        <table>
+            <tr>
+                @{
+                    var im = new Index1Model();
+                    var word = im.getWord();
+                }
+                <td>@word[0]</td>
+                @for(var i = 1; i < word.Length; i++)
+                    {<td>.</td>}
+                
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div>
+    @{var fullname = new Index1Model().TestWord(word,"wazawaza");}
+    @fullname
+</div>
